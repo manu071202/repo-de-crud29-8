@@ -54,7 +54,6 @@ function crearFila(pelicula) {
       </button>
     </td>
   </tr>`;
-  console.log(tablaPeliculas);
 }
 
 function crearPelicula() {
@@ -187,8 +186,14 @@ function actualizarPelicula() {
   borrarTabla();
   cargarInicial();
   //mostrar un mensaje intuitivo para el usuario
+  Swal.fire(
+    'Pelicula actualizada',
+    'Los datos de la pelicula seleccionada fueron actualizados',
+    'success'
+  )
   //cerrar la ventana modal
   modalAdminPelicula.hide();
   //limpiar el formulario
   limpiarFormulario();
+
 }

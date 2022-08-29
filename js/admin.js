@@ -59,6 +59,8 @@ function crearFila(pelicula) {
 function crearPelicula() {
   //volver asignar a la variable booleana el valor true
   peliculaNueva = true;
+  //limpiar el formulario
+  limpiarFormulario();
   //mostrar ventana modal
   modalAdminPelicula.show();
   //generar el identificador unico y asignarlo al campo del codigo

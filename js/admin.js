@@ -174,13 +174,21 @@ window.editarPelicula = function (codigoBuscado) {
 function actualizarPelicula() {
   console.log("actualizando pelicula...");
   //tomar todos los datos cargados del formulario, buscar el objeto que estoy mostrando en el formulario y actualizar sus valores
-
+  let posicionPeliBuscada= listaPeliculas.findIndex((pelicula)=> codigo.value === pelicula.codigo )
+  console.log(posicionPeliBuscada);
+  //modificar los valores dentro del arreglo
+  listaPeliculas[posicionPeliBuscada].titulo = titulo.value;
+  listaPeliculas[posicionPeliBuscada].descripcion = descripcion.value;
+  listaPeliculas[posicionPeliBuscada].imagen = imagen.value;
+  listaPeliculas[posicionPeliBuscada].genero = genero.value;
   //actualizar el localstorage
-
+  guardarPeliculasEnLocalStorage()
   //actualizar la tabla
-
+  borrarTabla();
+  cargarInicial();
+  //mostrar un mensaje intuitivo para el usuario
   //cerrar la ventana modal
-
+  modalAdminPelicula.hide();
   //limpiar el formulario
   limpiarFormulario();
 }

@@ -196,4 +196,4 @@ function actualizarPelicula() {
   //limpiar el formulario
   limpiarFormulario();
 
-}
+} 

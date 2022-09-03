@@ -22,9 +22,15 @@ padre.innerHTML +=`
     <img src="${pelicula.imagen}" class="card-img-top w-100" alt="img">
     <div class="card-body">
       <h5 class="card-title ">${pelicula.titulo}<br><span class="badge text-bg-danger rounded-pill mx-2">Nuevo</span></h5>
-      <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="modalmedialuna">Ver mas</button>
+      <button class="btn btn-primary" type="button"="modalmedialuna" onclick= "verDetalle('${pelicula.codigo}')">Ver mas</button>
     </div>
   </div>
 </aside>`
+
+}
+
+function verDetalle(codigo){
+  console.log(window.location.origin+'/pages/detalle.html?codigo='+codigo)
+  window.location.href = window.location.origin+'/pages/detalle.html?codigo='+codigog
 
 }

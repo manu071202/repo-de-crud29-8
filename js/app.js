@@ -31,6 +31,6 @@ padre.innerHTML +=`
 
 function verDetalle(codigo){
   console.log(window.location.origin+'/pages/detalle.html?codigo='+codigo)
-  window.location.href = window.location.origin+'/pages/detalle.html?codigo='+codigog
+  window.location.href = window.location.origin+'/pages/detalle.html?codigo='+codigo
 
 }

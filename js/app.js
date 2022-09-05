@@ -1,22 +1,22 @@
 //verificar si el localstorage tiene datos
-let listaPeliculas = JSON.parse(localStorage.getItem('listaPeliculasKey')) || [];
+let listaPeliculas =
+  JSON.parse(localStorage.getItem("listaPeliculasKey")) || [];
 let padre = document.querySelector("#grillaSPeliculas");
 
-
 //chequear si el arreglo listaPeliculas tiene algo
-if(listaPeliculas.length > 0){
-    //entonces dibujo las cards
-    listaPeliculas.map((pelicula)=>{
-        crearColumna(pelicula)
-    })
-}else{
-    //mostrar un mensaje intuitivo para el usuario
+if (listaPeliculas.length > 0) {
+  //entonces dibujo las cards
+  listaPeliculas.map((pelicula) => {
+    crearColumna(pelicula);
+  });
+} else {
+  //mostrar un mensaje intuitivo para el usuario
 }
 
-function crearColumna(pelicula){
-//traer el elemento padre de las columnas
-// dibujar una columna con su respectiva card
-padre.innerHTML +=`
+function crearColumna(pelicula) {
+  //traer el elemento padre de las columnas
+  // dibujar una columna con su respectiva card
+  padre.innerHTML += `
 <aside class="col-12 col-md-4 col-lg-3 my-3">
   <div class="card">
     <img src="${pelicula.imagen}" class="card-img-top w-100" alt="img">
@@ -25,12 +25,11 @@ padre.innerHTML +=`
       <button class="btn btn-primary" type="button"="modalmedialuna" onclick= "verDetalle('${pelicula.codigo}')">Ver mas</button>
     </div>
   </div>
-</aside>`
-
+</aside>`;
 }
 
-function verDetalle(codigo){
-  console.log(window.location.origin+'/pages/detalle.html?codigo='+codigo)
-  window.location.href = window.location.origin+'/pages/detalle.html?codigo='+codigo
-
+function verDetalle(codigo) {
+  console.log(window.location.origin + "/pages/detalle.html?codigo=" + codigo);
+  window.location.href =
+    window.location.origin + "/pages/detalle.html?codigo=" + codigo;
 }
